@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jessica Louis Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent Marker|Lalezar">
+
+    <!-- Javascript External Scripts-->
+    <script type ="text/javascript" src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script type ="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type ="text/javascript" src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+
+  </head>
+  <body>
+    <div class="logo">
+        <svg id="main-svg-container" xmlns="http://www.w3.org/2000/svg" width="225" height="225" viewbox="0 0 100 125" preserveAspectRatio="xMidYMid">
+        <defs>
+          <filter id="editing-hover">
+            <feFlood flood-color="#373F51" flood-opacity=".7" result="flood"/>
+            <feComposite operator="in" in2="SourceAlpha" in="flood" result="shadow"/>
+            <feOffset dx="-2" dy="-2" in="SourceGraphic" result="offset-1"/>
+            <feOffset dx="2" dy="2" in="shadow" result="offset-2"/>
+            <feMerge>
+              <feMergeNode in="offset-2"/>
+              <feMergeNode in="offset-1"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <g filter="url(#editing-hover)">
+            <path id="letter-J" xmlns="http://www.w3.org/2000/svg" d="m 20.02 73.83 l 0 0 l 0 0 q 3.27 -0.38 5.32 -4.61 l 0 0 l 0 0 q 2.11 -4.28 4.03 -14.14 l 0 0 l 6.21 -32.32 l 13.88 0 l -6.2 32.32 l 0 0 q -2.37 12.54 -6.28 17.47 l 0 0 l 0 0 q -2.04 2.56 -4.64 3.59 l 0 0 l 0 0 q -2.59 1.02 -5.4 1.02 l 0 0 l 0 0 q -2.82 0 -4.64 -1.02 l 0 0 l 0 0 q -1.83 -1.03 -2.28 -2.31 z z" fill="#37FF8B"/>
+            <path id="letter-L" xmlns="http://www.w3.org/2000/svg" d="m 51 65 z m 26.6 -9.9 l 0 0 l 0 0 q 1.2 1.6 1.2 4.6 l 0 0 l 0 0 q 0 2.9 -2.2 4.8 l 0 0 l 0 0 q -2.3 1.8 -6.3 1.8 l 0 0 l 0 0 q -2.3 0 -5.9 -0.5 l 0 0 l 0 0 q -7 -1.1 -9 -1.1 l 0 0 l 0 0 q -2 0 -2.9 0.1 l 0 0 l 0 0 q -0.8 0.1 -2.1 0.2 l 0 0 l 7.7 -42.2 l 14 0 l -6.4 35.2 l 0 0 q 0.8 0.1 1.6 0.1 l 0 0 l 1.6 0 l 0 0 q 5.4 0 8.7 -3 z" fill="#37FF8B"/>
+          </g> 
+          <text id="textName" x="50%" y="95" dominant-baseline="middle" text-anchor="middle">Jessica Louis</text>
+        </svg>
+    </div>
+    <div class="navigation">  
+        <div class="menu">
+            <div class="item"><span class="highlight">01.</span> About Me</div>
+            <div class="item"><span class="highlight">02.</span> Skills</div>
+            <div class="item"><span class="highlight">03.</span> Portfolio</div>
+            <div class="item"><span class="highlight">04.</span> Contact</div>
+        </div>
+    </div>
+    <!-- <div class="main">
+        <div class="section hero-section">
+            <svg class="hello-world" xmlns="http://www.w3.org/2000/svg" width="1000" height="200" viewbox="-40 0 100 100" preserveAspectRatio="xMidYMid">
+                <text class="title-header" x="0" y="50" dominant-baseline="middle" text-anchor="middle">Hello world!</text>
+            </svg>
+        </div>
+    </div> -->
+	<script>
+        // Logic for Beginning Logo Animation
+
+        var logoDiv = $('.logo'),
+            svgCont = $('#main-svg-container'),
+            lJ = $('#letter-J'),
+            lL = $('#letter-L'),
+            fullName = $('#textName'),
+            navigationMenu = $('.navigation'),
+            tl;
+
+        tl = new TimelineMax();
+        tl.from(lJ, .25, {x: -5, y: 15, opacity: 0}, 4)
+        tl.from(lL, .25, {x: 5, y: -15, opacity: 0}, "<")
+        tl.from(logoDiv, 2.25, 
+                    {left: "50%", 
+                        top: "50%", 
+                        transform: "translate(-50%,-50%)",
+                        ease: Power4.easeOut}, "+=1")
+        tl.from(fullName, 1.5, {y:-15, opacity: 0, ease: Bounce.easeOut})
+        tl.from(navigationMenu, .75, {x:-225}, "<")
+    </script>
+  </body>
+</html>
+
+
+
+
+
+  
