@@ -163,7 +163,7 @@ button {
     background: rgba(255,255,255,.02);
 }
 .highlight {
-    color: #37FF8B;
+    color: #00b3e2;
     font-size: 1.1rem;
     padding-right: 10px;
 }
@@ -207,4 +207,23 @@ button {
     background-color: transparent!important;
     border:none!important;
 }
-      
+
+#background_binary {
+    position: fixed;
+    top: -20px;
+    left: 0;
+    opacity: .1
+}
+
+.ui.segment {
+    background: transparent!important;
+}
+.ui.circular.image {
+    border: 5px solid #373F51;
+}
+
+h1{
+    color:#D8DBE2!important;
+    font-family: monospace!important;
+    font-size: 4rem!important;
+}
