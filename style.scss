@@ -1,0 +1,165 @@
+
+
+// Identify Document Colors
+:root {
+    --dark-blue: #103451;
+    --dark-teal: #196576;
+    --teal: #249597;
+    --medium-teal: #5ebbb8;
+    --light-teal: #91cbc7;
+    --still-teal: #a6d3d6;
+    --color-6: #c0dfdc;
+    --color-8: #f4f1f4;
+    --color-9: #e6edea;
+    --white-grey: #a6d3d6;
+    --white: #fff;
+}
+
+.light {
+    background-color: var(--white)!important;
+    
+}
+.grey {
+    background-color: var(--color-8)!important;
+}
+.teal {
+    background-color: var(--medium-teal)!important;
+}
+.dark {
+    background-color: var(--dark-blue)!important;
+    & h1, p, h3 {
+        color: var(--white)!important;
+    } 
+}
+
+li, a { cursor: pointer; }
+
+.highlight {
+    color: var(--medium-teal)!important;
+}
+
+html, body {
+    color: var(--white);
+}
+
+h1 {
+    color: var(--dark-blue);
+    font-family: 'Playfair Display', serif!important;
+    font-weight: 700!important;
+    font-size: 5em!important;
+    margin-bottom: 0px!important;
+    font-style: italic;
+}
+
+h3 {
+    margin-top:0px!important;
+}
+
+body {
+    font-family: 'Chivo', sans-serif;
+    font-weight: 300;
+   }
+
+.hero-content {
+    position: absolute;
+    text-align: center;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    & h2 {
+        margin-top:20px;
+        margin-bottom:20px;
+    }
+    & .top-icon {
+        color: var(--dark-blue);
+        padding: 0px 20px 0px 20px;
+        opacity: 0;
+    }
+}
+
+.navigation {
+    background-color: var(--dark-blue)!important;
+    border-bottom:3px solid var(--medium-teal)!important;
+    margin-top:0px!important;
+    border-radius: 0px!important;
+    width:100%;
+    padding:10px;
+    transition:
+      box-shadow 0.5s ease,
+      padding 0.5s ease
+    ;
+    & .ui.container > .item {
+        padding-right:50px!important;
+        color: var(--white);
+    }
+}
+.navigation.fixed {
+    background-color: #FFFFFF;
+    border: 1px solid #DDD;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  }
+
+.ui.image {
+    border: .5em solid var(--dark-blue);
+    position: relative;
+    z-index: 1;
+}
+
+.photo-border {
+    padding: .5em;
+    border: 0.5em solid var(--white-grey);
+    position: relative;
+  
+    &::before, &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      background: var(--white);
+    }
+    
+    &::before {
+      top: -1em; // let it overlap a bit to prevent thin line which could appear during scaling in some browsers etc.
+      bottom: -1em;
+      left: 5em;
+      right: 5em;
+    }
+    
+    &::after{
+      left: -1em;
+      right: -1em;
+      top: 5em;
+      bottom: 5em;
+    }
+}
+ 
+.section {
+    padding-top:100px;
+    padding-bottom:100px;
+    &.footer {
+        height:50px;
+        padding:0px;
+        border-top: 2px solid var(--still-teal)
+    }
+}
+
+.footer .container {
+    margin:0px!important;
+    padding:0px!important;
+    & .menu {
+        margin-top:0px!important;
+    }
+}
+
+.ui.form {
+    & .field {
+        margin: 4px!important;
+    }
+    & .field input, .field textarea{
+        border-radius: 0px!important;
+    }
+}
+
+.button {
+    border-radius: 0px!important;
+}
+

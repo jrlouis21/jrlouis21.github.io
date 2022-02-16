@@ -1,215 +1,174 @@
-* { 
-	box-sizing: border-box;
-}
-html, body {
-	min-height: 100%;
-}
-	/* sets the body height of the browser, so that backgrounds and div heights work correctly. Color and background will almost certainly be altered; they are just placeholders */
-	
-body {
-	font-size: 1.4rem;
-	text-rendering: optimizeLegibility;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background:#1e1e1e!important;
-}
-	
-table { border-collapse: collapse; }
-td {
-	padding: .5rem;
-}
-	/* causes tables to actually look like tables */
-	
-img { 
-	border: none;
-	max-width: 100%;
-}
-	/* removes outlines from linked images (for older browsers and IE), sets up images for responsive design layout */
-	
-input[type="submit"]::-moz-focus-inner, 
-	input[type="button"]::-moz-focus-inner {
-		border : 0px;
-	}
-	/* removes the inner border effect from focused buttons for form elements in Firefox */
-	
-input[type="search"] { 
-	-webkit-appearance: textfield;
-} 
-input[type="submit"] { 
-	-webkit-appearance:none;
-}
-	/* removes the OS X appearance from HTML5 search inputs and submit buttons when viewed in Safari */
-	
-input:required:after {
-	color: #f00;
-	content: " *";
-}
-	/* sets up required form fields with the conventional following red asterix */
-input[type="email"]:invalid { 
-	background: #f00;
-}
-	/* causes a visual alert in browsers that do client-side checking of HTML5 email field – this may already be the default in some browsers. */
-	
-svg polyline,
-svg line,
-svg path {
-    stroke-width: .25;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    transition: 0.2s;
-}
-
-#textName {
-    font-family:monospace;
-    fill: #D8DBE2;
-    opacity: .7;
-    font-size: .9rem;
-}
-
-.highlight {
-    color: #aa5099;
-    font-size: 1.1rem;
-    padding-right: 10px;
-}
-
-.navigation {
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
-    transition:
-      box-shadow 0.5s ease,
-      padding 0.5s ease
-    ;
-}
-
-.item-text{
-    color:#b3b3b3;
-    padding-bottom:5px;
-    font-size: 1.5em;
-    font-family:monospace;
-}
-.navigation.menu>.item:hover {
-    color: #D8DBE2;
-    background: rgba(255,255,255,.02);
-    font-size:1.501em;
-}
-
-.overlay {
-    background-color: #FFFFFF;
-    padding: 0em;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-    transition: all 0.5s ease;
-    background: transparent;
-    top:100px;
-    width:700px;
-    position:absolute;
-  }
-
-/* change style */
-.fixed.overlay {
-    position: fixed;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
-    width:700px;
-    background-color: #262829;
-  }
-
-
-
-/* MAIN SECTION */
-.main {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    left: 225px;
-    width: calc(100% - 225px);
-    height: 100%;
-}
-.section {
-    padding: 50px;
-}
-.hero-section {
-    width: 100%; 
-    height: 100%;
-}
-
-.tab.segment {
-    background-color: transparent!important;
-    border:none!important;
-}
-
-#background_binary {
-    position: relative;
-    top: -20px;
-    left: 0;
-    opacity: .1
-}
-
-.ui.segment {
-    background: transparent!important;
-    border:none!important;
-    box-shadow: none!important;
-}
-.ui.rounded.image {
-    border: 8px solid #e3e69e;
-}
-.ui.rounded.image {
-    content: "";
-    position: absolute;
-    border-bottom: 8px solid #aa5099;
-    border-right: 8px solid #aa5099;
-    height: 53.2rem;
-    width: 43.1rem
-}
-
-h1 {
-    color:#D8DBE2!important;
-    font-family: monospace!important;
-    font-size: 4rem!important;
-}
-
-.dark {
-    background-color: #262829;
-    opacity: 10%;
+:root {
+  --dark-blue: #103451;
+  --dark-teal: #196576;
+  --teal: #249597;
+  --medium-teal: #5ebbb8;
+  --light-teal: #91cbc7;
+  --still-teal: #a6d3d6;
+  --color-6: #c0dfdc;
+  --color-8: #f4f1f4;
+  --color-9: #e6edea;
+  --white-grey: #a6d3d6;
+  --white: #fff;
 }
 
 .light {
-    background-color:#b3b3b3;
-    border-top: 8px solid #262829;
-    border-bottom: 8px solid #262829;
+  background-color: var(--white) !important;
 }
 
-p {
-    color: #b3b3b3;
-    font-size:1.5rem;
+.grey {
+  background-color: var(--color-8) !important;
 }
 
-.blue.progress {
-    margin: 5px 0px 40px 0px!important;
+.teal {
+  background-color: var(--medium-teal) !important;
 }
 
-.light h1 {
-    color: #262829!important;
-    margin-bottom:0px!important;
-    font-size: 4rem!important;
-}
-.light h3 {
-    margin-top:0px!important;
-}
-.light p {
-    color: #262829!important;
-}
-.light .heading {
-    margin: 30px 0px 30px 0px!important;
+.dark {
+  background-color: var(--dark-blue) !important;
 }
 
-#about_me {
-    height: calc(100vh - 250px);
-}
-#skills, #portfolio, #contact {
-    height: 100vh
+.dark h1, .dark p, .dark h3 {
+  color: var(--white) !important;
 }
 
-.main-site .segment {
-    padding-top:150px!important;
+li, a {
+  cursor: pointer;
 }
+
+.highlight {
+  color: var(--medium-teal) !important;
+}
+
+html, body {
+  color: var(--white);
+}
+
+h1 {
+  color: var(--dark-blue);
+  font-family: "Playfair Display", serif !important;
+  font-weight: 700 !important;
+  font-size: 5em !important;
+  margin-bottom: 0px !important;
+  font-style: italic;
+}
+
+h3 {
+  margin-top: 0px !important;
+}
+
+body {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 300;
+}
+
+.hero-content {
+  position: absolute;
+  text-align: center;
+  top: 43%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.hero-content h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.hero-content .top-icon {
+  color: var(--dark-blue);
+  padding: 0px 20px 0px 20px;
+  opacity: 0;
+}
+
+.navigation {
+  background-color: var(--dark-blue) !important;
+  border-bottom: 3px solid var(--medium-teal) !important;
+  margin-top: 0px !important;
+  border-radius: 0px !important;
+  width: 100%;
+  padding: 10px;
+  -webkit-transition: padding 0.5s ease, -webkit-box-shadow 0.5s ease;
+  transition: padding 0.5s ease, -webkit-box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease, padding 0.5s ease;
+  transition: box-shadow 0.5s ease, padding 0.5s ease, -webkit-box-shadow 0.5s ease;
+}
+
+.navigation .ui.container > .item {
+  padding-right: 50px !important;
+  color: var(--white);
+}
+
+.navigation.fixed {
+  background-color: #FFFFFF;
+  border: 1px solid #DDD;
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.ui.image {
+  border: 0.5em solid var(--dark-blue);
+  position: relative;
+  z-index: 1;
+}
+
+.photo-border {
+  padding: .5em;
+  border: 0.5em solid var(--white-grey);
+  position: relative;
+}
+
+.photo-border::before, .photo-border::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: var(--white);
+}
+
+.photo-border::before {
+  top: -1em;
+  bottom: -1em;
+  left: 5em;
+  right: 5em;
+}
+
+.photo-border::after {
+  left: -1em;
+  right: -1em;
+  top: 5em;
+  bottom: 5em;
+}
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section.footer {
+  height: 50px;
+  padding: 0px;
+  border-top: 2px solid var(--still-teal);
+}
+
+.footer .container {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.footer .container .menu {
+  margin-top: 0px !important;
+}
+
+.ui.form .field {
+  margin: 4px !important;
+}
+
+.ui.form .field input, .ui.form .field textarea {
+  border-radius: 0px !important;
+}
+
+.button {
+  border-radius: 0px !important;
+}
+/*# sourceMappingURL=style2.css.map */

@@ -1,0 +1,263 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+/* sets the body height of the browser, so that backgrounds and div heights work correctly. Color and background will almost certainly be altered; they are just placeholders */
+body {
+  font-size: 1.4rem;
+  text-rendering: optimizeLegibility;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #fff !important;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  padding: .5rem;
+}
+
+/* causes tables to actually look like tables */
+img {
+  border: none;
+  max-width: 100%;
+}
+
+/* removes outlines from linked images (for older browsers and IE), sets up images for responsive design layout */
+input[type="submit"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner {
+  border: 0px;
+}
+
+/* removes the inner border effect from focused buttons for form elements in Firefox */
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+input[type="submit"] {
+  -webkit-appearance: none;
+}
+
+/* removes the OS X appearance from HTML5 search inputs and submit buttons when viewed in Safari */
+input:required:after {
+  color: #f00;
+  content: " *";
+}
+
+/* sets up required form fields with the conventional following red asterix */
+input[type="email"]:invalid {
+  background: #f00;
+}
+
+/* causes a visual alert in browsers that do client-side checking of HTML5 email field – this may already be the default in some browsers. */
+svg polyline,
+svg line,
+svg path {
+  stroke-width: .25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#textName {
+  font-family: monospace;
+  fill: #D8DBE2;
+  opacity: .7;
+  font-size: .9rem;
+}
+
+.highlight {
+  color: #aa5099;
+  font-size: 1.1rem;
+  padding-right: 10px;
+}
+
+.navigation {
+  border-radius: 0;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: padding 0.5s ease, -webkit-box-shadow 0.5s ease;
+  transition: padding 0.5s ease, -webkit-box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease, padding 0.5s ease;
+  transition: box-shadow 0.5s ease, padding 0.5s ease, -webkit-box-shadow 0.5s ease;
+}
+
+.item-text {
+  color: #fff;
+  padding-bottom: 5px;
+  font-size: 1.5em;
+  font-family: monospace;
+}
+
+.navigation.menu > .item:hover {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.overlay {
+  background-color: #FFFFFF;
+  padding: 0em;
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: transparent;
+  top: 100px;
+  width: 700px;
+  position: absolute;
+}
+
+/* change style */
+.fixed.overlay {
+  position: fixed;
+  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  width: 700px;
+  background-color: #262829;
+}
+
+.fixed.overlay .navigation {
+  margin: 0px !important;
+}
+
+.fixed.overlay .ui-menu-item {
+  padding: 20px !important;
+}
+
+.fixed.overlay .ui-menu-item:hover {
+  background-color: #e3e69e !important;
+  font-size: 1em !important;
+  border-bottom: none !important;
+}
+
+.ui.segment {
+  background: transparent !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.ui.image {
+  border: .5em solid #e3e69e;
+  position: relative;
+  z-index: 1;
+}
+
+.photo-border {
+  padding: .5em;
+  border: 0.5em solid #aa5099;
+  position: relative;
+}
+
+.photo-border::before, .photo-border::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: #1e1e1e;
+}
+
+.photo-border::before {
+  top: -1em;
+  bottom: -1em;
+  left: 5em;
+  right: 5em;
+}
+
+.photo-border::after {
+  left: -1em;
+  right: -1em;
+  top: 5em;
+  bottom: 5em;
+}
+
+h1 {
+  color: #b3b3b3 !important;
+  font-family: monospace !important;
+  font-size: 4rem !important;
+}
+
+.dark {
+  background-color: #262829;
+  opacity: 10%;
+}
+
+.light {
+  background-color: #b3b3b3;
+  border-top: 8px solid #262829;
+  border-bottom: 8px solid #262829;
+}
+
+p {
+  color: #b3b3b3;
+  font-size: 1.5rem;
+}
+
+.light h1 {
+  color: #aa5099 !important;
+  margin-bottom: 0px !important;
+  font-size: 4rem !important;
+}
+
+.light h3 {
+  margin-top: 0px !important;
+}
+
+.light p {
+  color: #262829 !important;
+}
+
+#skills, #portfolio, #contact {
+  min-height: 600px;
+  padding: 100px 0px 100px 0px !important;
+}
+
+.main-site .hero.segment {
+  padding-top: 150px !important;
+}
+
+.hero-header-text {
+  font-size: 2.5rem !important;
+  opacity: 0;
+}
+
+#header-row-one {
+  margin-bottom: 0px;
+  padding-top: 1em;
+}
+
+#header-row-two {
+  margin-top: 0px;
+}
+
+.progress {
+  margin: 5px 0px 40px 0px !important;
+}
+
+.pink {
+  background-color: #aa5099 !important;
+}
+
+.light-blue {
+  background-color: #0e639c !important;
+}
+
+.yellow {
+  background-color: #e3e69e !important;
+}
+/*# sourceMappingURL=style.css.map */
