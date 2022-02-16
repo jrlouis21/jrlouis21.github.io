@@ -1,35 +1,41 @@
 :root {
   --dark-blue: #103451;
-  --dark-teal: #196576;
-  --teal: #249597;
   --medium-teal: #5ebbb8;
   --light-teal: #91cbc7;
-  --still-teal: #a6d3d6;
-  --color-6: #c0dfdc;
-  --color-8: #f4f1f4;
-  --color-9: #e6edea;
-  --white-grey: #a6d3d6;
+  --grey: #f4f1f4;
   --white: #fff;
+  --primary-background: var(--white);
+  --secondary-background: var(--grey);
+  --navbar: var(--dark-blue);
+  --primary-accent: var(--medium-teal);
+  --secondary-accent-1: var(--light-teal);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .light {
-  background-color: var(--white) !important;
+  background-color: var(--primary-background) !important;
 }
 
 .grey {
-  background-color: var(--color-8) !important;
+  background-color: var(--secondary-background) !important;
 }
 
 .teal {
-  background-color: var(--medium-teal) !important;
+  background-color: var(--primary-accent) !important;
 }
 
 .dark {
-  background-color: var(--dark-blue) !important;
+  background-color: var(--navbar) !important;
 }
 
 .dark h1, .dark p, .dark h3 {
-  color: var(--white) !important;
+  color: var(--primary-background) !important;
 }
 
 li, a {
@@ -37,15 +43,15 @@ li, a {
 }
 
 .highlight {
-  color: var(--medium-teal) !important;
+  color: var(--primary-accent) !important;
 }
 
 html, body {
-  color: var(--white);
+  color: var(--primary-background);
 }
 
 h1 {
-  color: var(--dark-blue);
+  color: var(--navbar);
   font-family: "Playfair Display", serif !important;
   font-weight: 700 !important;
   font-size: 5em !important;
@@ -77,14 +83,14 @@ body {
 }
 
 .hero-content .top-icon {
-  color: var(--dark-blue);
+  color: var(--navbar);
   padding: 0px 20px 0px 20px;
   opacity: 0;
 }
 
 .navigation {
-  background-color: var(--dark-blue) !important;
-  border-bottom: 3px solid var(--medium-teal) !important;
+  background-color: var(--navbar) !important;
+  border-bottom: 3px solid var(--primary-accent) !important;
   margin-top: 0px !important;
   border-radius: 0px !important;
   width: 100%;
@@ -97,7 +103,7 @@ body {
 
 .navigation .ui.container > .item {
   padding-right: 50px !important;
-  color: var(--white);
+  color: var(--primary-background);
 }
 
 .navigation.fixed {
@@ -108,14 +114,14 @@ body {
 }
 
 .ui.image {
-  border: 0.5em solid var(--dark-blue);
+  border: 0.5em solid var(--navbar);
   position: relative;
   z-index: 1;
 }
 
 .photo-border {
   padding: .5em;
-  border: 0.5em solid var(--white-grey);
+  border: 0.5em solid var(--secondary-accent-1);
   position: relative;
 }
 
@@ -123,7 +129,7 @@ body {
   content: '';
   display: block;
   position: absolute;
-  background: var(--white);
+  background: var(--primary-background);
 }
 
 .photo-border::before {
@@ -148,7 +154,7 @@ body {
 .section.footer {
   height: 50px;
   padding: 0px;
-  border-top: 2px solid var(--still-teal);
+  border-top: 2px solid var(--secondary-accent-1);
 }
 
 .footer .container {
@@ -171,4 +177,71 @@ body {
 .button {
   border-radius: 0px !important;
 }
-/*# sourceMappingURL=style2.css.map */
+
+@media (min-width: 1210px) {
+  .honeycomb {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .hexagon, .hexagon::before, .hexagon::after {
+    width: 100px;
+    height: 173px;
+  }
+  .hexagon {
+    position: relative;
+    display: inline-block;
+    margin: 1px 29px;
+    background-color: var(--navbar);
+    text-align: center;
+  }
+  .hexagon::before {
+    background-color: inherit;
+    content: "";
+    position: absolute;
+    left: 0;
+    -webkit-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+  }
+  .hexagon::after {
+    background-color: inherit;
+    content: "";
+    position: absolute;
+    left: 0;
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+  .hexagon:nth-child(even) {
+    top: 90px;
+  }
+  .hexagon:hover {
+    background-color: var(--secondary-accent-1);
+    cursor: pointer;
+  }
+  .hexagon:active {
+    background-color: var(--secondary-accent-1);
+  }
+  .hexagon.transparent {
+    background-color: transparent;
+  }
+  .hexagon .hex-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 140%;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    z-index: 1;
+    color: var(--primary-background);
+  }
+  .spacing-fix {
+    font-size: 0;
+  }
+  .tiny.progress {
+    background-color: var(--primary-background) !important;
+    margin-top: 10px !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */
